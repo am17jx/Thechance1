@@ -38,6 +38,7 @@ fun main() {
         )
 
 
+
         check(
             name = "Invalid nonAllowed Chars IPv4Address",
             result = ip("1h7.49j.-23.@"),
@@ -61,6 +62,12 @@ fun main() {
             result = ip(" 192.168.1.1"),
             correct = false
         )
+
+    check(
+        name = "Invalid zero IPv4Address",
+        result = ip("092.168.1.1"),
+        correct = false
+    )
 
         check(
             name = "Invalid many segment IPv4Address",
